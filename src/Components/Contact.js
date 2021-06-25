@@ -39,6 +39,11 @@ const Contact = ({ data }) => {
       .catch((error) => {
         alert(error.message);
       });
+
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
   };
 
   return (
@@ -46,7 +51,7 @@ const Contact = ({ data }) => {
       <div className="row section-head">
         <div className="two columns header-col">
           <h1>
-            <span>Get In Touch.</span>
+            <span>Get In Touch</span>
           </h1>
         </div>
 

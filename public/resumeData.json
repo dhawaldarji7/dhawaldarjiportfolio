@@ -42,7 +42,6 @@
     ]
   },
   "resume": {
-    "skillmessage": "My Programming Language Proficiency",
     "education": [
       {
         "school": "University of New Hampshire, Durham, NH, USA",
@@ -59,16 +58,16 @@
     ],
     "work": [
       {
-        "company": "",
-        "title": "",
-        "years": "",
-        "description": ""
+        "company": "XXX",
+        "title": "XXX",
+        "years": "XXX",
+        "description": "XXX"
       }
     ],
     "skills": [
       {
-        "name": "ReactJs",
-        "level": "100%"
+        "Languages": "Java, Python, C++, C, JavaScript",
+        "Libraries": "ReactJs"
       }
     ]
   },
