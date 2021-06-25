@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { db } from "./firebase";
 
 const Contact = ({ data }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [nameError, setNameError] = useState("Name is empty");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
 
   if (data) {
     var contactName = data.name;
@@ -17,14 +21,24 @@ const Contact = ({ data }) => {
     var contactMessage = data.contactmessage;
   }
 
-  const submitForm = () => {
-    window.open(
-      `mailto:${contactEmail}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(name)} (${encodeURIComponent(
-        email
-      )}): ${encodeURIComponent(message)}`
-    );
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    db.collection("messages")
+      .add({
+        name: name,
+        subject: subject,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        alert(
+          "Thank you for contacting me. I'll try to reach out to you asap! 🙌"
+        );
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   return (
@@ -109,15 +123,6 @@ const Contact = ({ data }) => {
               </div>
             </fieldset>
           </form>
-
-          <div id="message-warning">
-            {" "}
-            Unable to send message. Please try again!
-          </div>
-          <div id="message-success">
-            <i className="fa fa-check"></i>Your message was sent, thank you!
-            <br />
-          </div>
         </div>
 
         <aside className="four columns footer-widgets">
@@ -130,7 +135,7 @@ const Contact = ({ data }) => {
               <br />
               Address: {city}, {state}, {country} {zip}
               <br />
-              <span>{phone}</span>
+              <span> Phone: {phone}</span>
             </p>
           </div>
         </aside>
