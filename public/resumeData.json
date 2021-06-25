@@ -1,0 +1,110 @@
+{
+  "main": {
+    "name": "Dhawal Darji",
+    "occupation": "Full Stack Developer",
+    "description": "I code, sing, play guitar, and consume chai!",
+    "image": "profilepic.jpg",
+    "bio": "My name is Dhawal. I'm a Full Stack Developer with around 3 years of experience. ",
+    "contactmessage": "Get in touch!",
+    "email": "dhawal.d7@gmail.com",
+    "phone": "+1 603-205-9043",
+    "address": {
+      "street": "",
+      "city": "Dover",
+      "state": "NH",
+      "country": "USA",
+      "zip": "03820"
+    },
+    "website": "",
+    "resumedownload": "https://doc-0g-48-docs.googleusercontent.com/docs/securesc/d3r6v379rk60jub138i397tjq795oo9s/7s5jbo445uiga1njjipb1vo1558becsa/1624228725000/00704665230381949839/00704665230381949839/1rlvc_RGmj8qlPbyOJ6LJbsW2WOHxD4sy?e=download&authuser=0",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/dhawaldarji",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/dhawaldarji7",
+        "className": "fa fa-github"
+      },
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/dhawald7",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/dhawald7/",
+        "className": "fa fa-instagram"
+      }
+
+    ]
+  },
+  "resume": {
+    "skillmessage": "My Programming Language Proficiency",
+    "education": [
+      {
+        "school": "University of New Hampshire, Durham, NH, USA",
+        "degree": "Master of Science, Computer Science",
+        "graduated": "May 2021",
+        "description": ""
+      },
+      {
+        "school": "Savitribai Phule Pune University, Pune, MH, India",
+        "degree": "Bachelor of Engineering, Information Technology",
+        "graduated": "June 2018",
+        "description": ""
+      }
+    ],
+    "work": [
+      {
+        "company": "",
+        "title": "",
+        "years": "",
+        "description": ""
+      }
+    ],
+    "skills": [
+      {
+        "name": "ReactJs",
+        "level": "100%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "YouID",
+        "category": "BioHacking",
+        "image": "blackscreen.jpg",
+        "url": "https://github.com/dhawaldarji7/YouID"
+      },
+      {
+        "title": "Transliterator",
+        "category": "Machine Learning",
+        "image": "blackscreen.jpg",
+        "url": "https://github.com/dhawaldarji7/Transliterator"
+      },
+      {
+        "title": "deVirtualizer",
+        "category": "Security",
+        "image": "blackscreen.jpg",
+        "url": "https://github.com/dhawaldarji7/deVirtualizer"
+      },
+      {
+        "title": "BoolQ",
+        "category": "Deep Learning",
+        "image": "blackscreen.jpg",
+        "url": "https://github.com/dhawaldarji7/Boolq"
+      },
+      {
+        "title": "Twitter Sentiment Analysis",
+        "category": "Information Retrieval",
+        "image": "blackscreen.jpg",
+        "url": "https://github.com/dhawaldarji7/Target-Independent-Twitter-Sentiment-Analysis"
+      }
+    ]
+  }
+ 
+}
