@@ -6,9 +6,9 @@ const Contact = ({ data }) => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [nameError, setNameError] = useState("Name is empty");
-  const [emailError, setEmailError] = useState("");
-  const [messageError, setMessageError] = useState("");
+  // const [nameError, setNameError] = useState("Name is empty");
+  // const [emailError, setEmailError] = useState("");
+  // const [messageError, setMessageError] = useState("");
 
   if (data) {
     var contactName = data.name;
@@ -49,12 +49,6 @@ const Contact = ({ data }) => {
   return (
     <section id="contact">
       <div className="row section-head">
-        <div className="two columns header-col">
-          <h1>
-            <span>Get In Touch</span>
-          </h1>
-        </div>
-
         <div className="ten columns">
           <p className="lead">{contactMessage}</p>
         </div>
