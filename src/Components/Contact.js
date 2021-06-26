@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useFormik } from "formik";
 import { db } from "./firebase";
+import * as yup from "yup";
 
 const Contact = ({ data }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  // const [nameError, setNameError] = useState("Name is empty");
-  // const [emailError, setEmailError] = useState("");
-  // const [messageError, setMessageError] = useState("");
-
   if (data) {
     var contactName = data.name;
     var city = data.address.city;
@@ -21,15 +15,15 @@ const Contact = ({ data }) => {
     var contactMessage = data.contactmessage;
   }
 
-  const submitForm = (e) => {
-    e.preventDefault();
+  const submitForm = (values, formik) => {
+    console.log(values);
 
     db.collection("messages")
       .add({
-        name: name,
-        subject: subject,
-        email: email,
-        message: message,
+        name: values.contactName,
+        email: values.contactEmail,
+        subject: values.contactSubject,
+        message: values.contactMessage,
       })
       .then(() => {
         alert(
@@ -39,12 +33,39 @@ const Contact = ({ data }) => {
       .catch((error) => {
         alert(error.message);
       });
-
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
   };
+
+  const formik = useFormik({
+    initialValues: {
+      contactName: "",
+      contactEmail: "",
+      contactSubject: "",
+      contactMessage: "",
+    },
+
+    validationSchema: yup.object({
+      contactName: yup
+        .string()
+        .min(3, "Name more than 3")
+        .max(25)
+        .required("Name is required"),
+
+      contactEmail: yup.string().email().required("enter email"),
+
+      contactSubject: yup.string().min(5).max(15),
+
+      contactMessage: yup
+        .string()
+        .min(25)
+        .max(350)
+        .required("Message is required"),
+    }),
+
+    onSubmit: (values, { resetForm }) => {
+      submitForm(values);
+      resetForm();
+    },
+  });
 
   return (
     <section id="contact">
@@ -56,21 +77,23 @@ const Contact = ({ data }) => {
 
       <div className="row">
         <div className="eight columns">
-          <form onSubmit={submitForm}>
+          <form onSubmit={formik.handleSubmit}>
             <fieldset>
               <div>
                 <label htmlFor="contactName">
                   Name <span className="required">*</span>
                 </label>
                 <input
-                  type="text"
-                  defaultValue=""
-                  value={name}
-                  size="35"
                   id="contactName"
                   name="contactName"
-                  onChange={(e) => setName(e.target.value)}
+                  type="text"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.contactName}
                 />
+                {formik.touched.contactName && formik.errors.contactName ? (
+                  <div>{formik.errors.contactName}</div>
+                ) : null}
               </div>
 
               <div>
@@ -78,27 +101,32 @@ const Contact = ({ data }) => {
                   Email <span className="required">*</span>
                 </label>
                 <input
-                  type="text"
-                  defaultValue=""
-                  value={email}
-                  size="35"
                   id="contactEmail"
                   name="contactEmail"
-                  onChange={(e) => setEmail(e.target.value)}
+                  type="text"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.contactEmail}
                 />
+                {formik.touched.contactEmail && formik.errors.contactEmail ? (
+                  <div>{formik.errors.contactEmail}</div>
+                ) : null}
               </div>
 
               <div>
                 <label htmlFor="contactSubject">Subject</label>
                 <input
-                  type="text"
-                  defaultValue=""
-                  value={subject}
-                  size="35"
                   id="contactSubject"
                   name="contactSubject"
-                  onChange={(e) => setSubject(e.target.value)}
+                  type="text"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.contactSubject}
                 />
+                {formik.touched.contactSubject &&
+                formik.errors.contactSubject ? (
+                  <div>{formik.errors.contactSubject}</div>
+                ) : null}
               </div>
 
               <div>
@@ -108,15 +136,26 @@ const Contact = ({ data }) => {
                 <textarea
                   cols="50"
                   rows="15"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
                   id="contactMessage"
                   name="contactMessage"
+                  placeholder="Type your message here"
+                  type="text"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.contactMessage}
                 ></textarea>
+                {formik.touched.contactMessage &&
+                formik.errors.contactMessage ? (
+                  <div>{formik.errors.contactMessage}</div>
+                ) : null}
               </div>
 
               <div>
-                <button onClick={submitForm} type="submit" className="submit">
+                <button
+                  type="submit"
+                  className="submit"
+                  disabled={!(formik.errors && formik.isValid)}
+                >
                   Submit
                 </button>
               </div>
