@@ -46,18 +46,21 @@ const Contact = ({ data }) => {
     validationSchema: yup.object({
       contactName: yup
         .string()
-        .min(3, "Name more than 3")
-        .max(25)
+        .min(3, "Name should contain atleast three characters")
+        .max(25, "Name can only have 25 characters")
         .required("Name is required"),
 
-      contactEmail: yup.string().email().required("enter email"),
+      contactEmail: yup.string().email().required("Email is required"),
 
-      contactSubject: yup.string().min(5).max(15),
+      contactSubject: yup
+        .string()
+        .min(5, "Subject should contain atleast 5 characters")
+        .max(30, "Subject can only have 30 characters"),
 
       contactMessage: yup
         .string()
-        .min(25)
-        .max(350)
+        .min(40, "Min message length required is 40 characters")
+        .max(350, "Message can only be 350 characters long")
         .required("Message is required"),
     }),
 
@@ -83,77 +86,95 @@ const Contact = ({ data }) => {
                 <label htmlFor="contactName">
                   Name <span className="required">*</span>
                 </label>
-                <input
-                  id="contactName"
-                  name="contactName"
-                  type="text"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.contactName}
-                />
-                {formik.touched.contactName && formik.errors.contactName ? (
-                  <div>{formik.errors.contactName}</div>
-                ) : null}
+                <div className="fieldStatus">
+                  <input
+                    id="contactName"
+                    name="contactName"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.contactName}
+                  />
+                  {formik.touched.contactName && formik.errors.contactName ? (
+                    <span className="errorAlert">
+                      {formik.errors.contactName}
+                    </span>
+                  ) : null}
+                </div>
               </div>
 
               <div>
                 <label htmlFor="contactEmail">
                   Email <span className="required">*</span>
                 </label>
-                <input
-                  id="contactEmail"
-                  name="contactEmail"
-                  type="text"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.contactEmail}
-                />
-                {formik.touched.contactEmail && formik.errors.contactEmail ? (
-                  <div>{formik.errors.contactEmail}</div>
-                ) : null}
+                <div className="fieldStatus">
+                  <input
+                    id="contactEmail"
+                    name="contactEmail"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.contactEmail}
+                  />
+                  {formik.touched.contactEmail && formik.errors.contactEmail ? (
+                    <span className="errorAlert">
+                      Email address is not valid
+                    </span>
+                  ) : null}
+                </div>
               </div>
 
               <div>
                 <label htmlFor="contactSubject">Subject</label>
-                <input
-                  id="contactSubject"
-                  name="contactSubject"
-                  type="text"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.contactSubject}
-                />
-                {formik.touched.contactSubject &&
-                formik.errors.contactSubject ? (
-                  <div>{formik.errors.contactSubject}</div>
-                ) : null}
+                <div className="fieldStatus">
+                  <input
+                    id="contactSubject"
+                    name="contactSubject"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.contactSubject}
+                  />
+                  {formik.touched.contactSubject &&
+                  formik.errors.contactSubject ? (
+                    <span className="errorAlert">
+                      {formik.errors.contactSubject}
+                    </span>
+                  ) : null}
+                </div>
               </div>
 
               <div>
                 <label htmlFor="contactMessage">
                   Message <span className="required">*</span>
                 </label>
-                <textarea
-                  cols="50"
-                  rows="15"
-                  id="contactMessage"
-                  name="contactMessage"
-                  placeholder="Type your message here"
-                  type="text"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.contactMessage}
-                ></textarea>
-                {formik.touched.contactMessage &&
-                formik.errors.contactMessage ? (
-                  <div>{formik.errors.contactMessage}</div>
-                ) : null}
+                <div className="fieldStatus">
+                  <textarea
+                    cols="50"
+                    rows="15"
+                    id="contactMessage"
+                    name="contactMessage"
+                    placeholder="Type your message here"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.contactMessage}
+                  ></textarea>
+                  {formik.touched.contactMessage &&
+                  formik.errors.contactMessage ? (
+                    <span className="errorAlert">
+                      {formik.errors.contactMessage}
+                    </span>
+                  ) : null}
+                </div>
               </div>
 
               <div>
                 <button
                   type="submit"
-                  className="submit"
+                  className={
+                    !(formik.errors && formik.isValid) ? "disabled" : "submit"
+                  }
                   disabled={!(formik.errors && formik.isValid)}
                 >
                   Submit
