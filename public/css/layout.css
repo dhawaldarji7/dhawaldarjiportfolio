@@ -478,7 +478,7 @@ ul#nav li.current a {
 }
 .popup-modal .link-box {
   padding: 18px 36px;
-  background: #111;
+  background: #99aead;
   text-align: left;
 }
 .popup-modal .link-box a {
@@ -687,7 +687,10 @@ ul#nav li.current a {
   padding-top: 50px;
   padding-bottom: 75px;
   color: #636363;
+  display: flex;
+  flex-direction: column;
 }
+
 #contact .section-head {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -712,7 +715,7 @@ ul#nav li.current a {
 #contact h1 span {
   display: none;
 }
-#contact p.lead:before {
+#contact .contactLogo:before {
   font-family: "FontAwesome";
   content: "\f0e0";
   padding-right: 0px;
@@ -721,7 +724,11 @@ ul#nav li.current a {
   text-align: left;
   float: left;
   color: black;
-  margin-right: 215px;
+}
+
+#contact .greet {
+  display: flex;
+  justify-content: center;
 }
 
 #contact h4 {
@@ -733,6 +740,7 @@ ul#nav li.current a {
   font: 24px/36px "opensans-semibold", sans-serif;
   padding-right: 3%;
   color: black;
+  margin-left: 10px;
 }
 #contact .header-col {
   padding-top: 6px;
@@ -742,6 +750,7 @@ ul#nav li.current a {
 #contact form {
   margin-bottom: 10px;
 }
+
 #contact label {
   font: 15px/24px "opensans-bold", sans-serif;
   margin: 12px 0;
@@ -773,13 +782,16 @@ ul#nav li.current a {
   letter-spacing: 3px;
   font-size: medium;
   color: #dee1dd;
+  height: 60px;
+  width: 150px;
   background: #373233;
   border: none;
   cursor: pointer;
-  height: auto;
   display: inline-block;
   border-radius: 50px;
-  margin-left: 43%;
+  align-items: center;
+  padding: 0%;
+  margin-left: 100px;
 }
 #contact button.submit:hover {
   color: #0d0d0d;
@@ -791,14 +803,16 @@ ul#nav li.current a {
   letter-spacing: 3px;
   font-size: medium;
   color: #dee1dd;
+  height: 60px;
+  width: 150px;
   background: #373233;
   border: none;
   cursor: pointer;
-  height: auto;
   display: inline-block;
   border-radius: 50px;
-  margin-left: 43%;
-  opacity: 20%;
+  align-items: center;
+  opacity: 30%;
+  margin-left: 100px;
 }
 #contact button.disabled:hover {
   cursor: not-allowed;
@@ -808,6 +822,7 @@ ul#nav li.current a {
   display: flex;
   flex-direction: column;
 }
+
 #contact .errorAlert {
   margin-top: -30px;
   color: red;

@@ -73,14 +73,15 @@ const Contact = ({ data }) => {
   return (
     <section id="contact">
       <div className="row section-head">
-        <div className="ten columns">
+        <div className="greet eight columns">
+          <p className="contactLogo"></p>
           <p className="lead">{contactMessage}</p>
         </div>
       </div>
 
       <div className="row">
         <div className="eight columns">
-          <form onSubmit={formik.handleSubmit}>
+          <form onSubmit={formik.handleSubmit} className="contactForm">
             <fieldset>
               <div>
                 <label htmlFor="contactName">
@@ -166,19 +167,17 @@ const Contact = ({ data }) => {
                       {formik.errors.contactMessage}
                     </span>
                   ) : null}
-                </div>
-              </div>
 
-              <div>
-                <button
-                  type="submit"
-                  className={
-                    !(formik.errors && formik.isValid) ? "disabled" : "submit"
-                  }
-                  disabled={!(formik.errors && formik.isValid)}
-                >
-                  Submit
-                </button>
+                  <button
+                    type="submit"
+                    className={
+                      !(formik.errors && formik.isValid) ? "disabled" : "submit"
+                    }
+                    disabled={!(formik.errors && formik.isValid)}
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
             </fieldset>
           </form>
