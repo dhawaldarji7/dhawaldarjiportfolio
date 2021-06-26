@@ -91,6 +91,7 @@ const Contact = ({ data }) => {
                   <input
                     id="contactName"
                     name="contactName"
+                    placeholder="What can I call you?"
                     type="text"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
@@ -112,6 +113,7 @@ const Contact = ({ data }) => {
                   <input
                     id="contactEmail"
                     name="contactEmail"
+                    placeholder="Where can I reach you?"
                     type="text"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
@@ -131,6 +133,7 @@ const Contact = ({ data }) => {
                   <input
                     id="contactSubject"
                     name="contactSubject"
+                    placeholder="What's this about?"
                     type="text"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
