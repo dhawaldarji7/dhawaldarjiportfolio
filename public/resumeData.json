@@ -77,23 +77,23 @@
       },
       {
         "type": "Web Development",
-        "values": "ReactJS, HTML/CSS, Bootstrap, AJAX, jQuery"
+        "values": "ReactJS, HTML/CSS, Bootstrap, AJAX, jQuery, REST, SOAP"
       },
       {
         "type": "Frameworks",
         "values": "Spring, Spring Boot, Spring MVC, Spring Microservices, Hibernate"
       },
       {
-        "type": "Web Services",
-        "values": "Rest, Soap"
+        "type":"Libraries",
+        "values": "Pytorch, NumPy, Pandas, Transformers, Scikit-learn, Lucene"
       },
       {
         "type": "Databases",
         "values": "MySQL, MongoDB"
       },
       {
-        "type": "Developer Tools",
-        "values": "Git, Jenkins, Maven, JIRA"
+        "type": "Developer Tools & IDEs",
+        "values": "Git, Jenkins, Maven, JIRA, IntelliJ, PyCharm, VS Code, Eclipse"
       }
     
     ]
@@ -104,31 +104,50 @@
         "title": "YouID",
         "category": "BioHacking",
         "image": "blackscreen.jpg",
-        "url": "https://github.com/dhawaldarji7/YouID"
+        "url": "https://github.com/dhawaldarji7/YouID",
+        "description": "A NFC based biometric identification system"
       },
       {
         "title": "Transliterator",
         "category": "Machine Learning",
         "image": "blackscreen.jpg",
-        "url": "https://github.com/dhawaldarji7/Transliterator"
+        "url": "https://github.com/dhawaldarji7/Transliterator",
+        "description": "Hindi-to-English transliteration system build using CRFs and Neural Networks"
       },
       {
         "title": "deVirtualizer",
         "category": "Security",
         "image": "blackscreen.jpg",
-        "url": "https://github.com/dhawaldarji7/deVirtualizer"
+        "url": "https://github.com/dhawaldarji7/deVirtualizer",
+        "description": "A tool to analyze binary program obfuscated using CodeVirtualizer"
       },
       {
         "title": "BoolQ",
         "category": "Deep Learning",
         "image": "blackscreen.jpg",
-        "url": "https://github.com/dhawaldarji7/Boolq"
+        "url": "https://github.com/dhawaldarji7/Boolq",
+        "description": "Leveraging transformers (BERT & its variants) along with NLP techniques to solve the boolean question-answering task"
       },
       {
         "title": "Twitter Sentiment Analysis",
         "category": "Information Retrieval",
         "image": "blackscreen.jpg",
-        "url": "https://github.com/dhawaldarji7/Target-Independent-Twitter-Sentiment-Analysis"
+        "url": "https://github.com/dhawaldarji7/Target-Independent-Twitter-Sentiment-Analysis",
+        "description": "Performing target independent sentiment analysis on tweets."
+      },
+      {
+        "title": "Facebook Clone",
+        "category": "Web Apps",
+        "image": "blackscreen.jpg",
+        "url": "https://github.com/dhawaldarji7/facebookClone",
+        "description": "A Facebook clone built using React"
+      },
+      {
+        "title": "Amazon Clone",
+        "category": "Web Apps",
+        "image": "blackscreen.jpg",
+        "url": "https://github.com/dhawaldarji7/amazonClone",
+        "description": "An Amazon clone built using React"
       }
     ]
   }

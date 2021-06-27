@@ -13,6 +13,7 @@ const projects = ({ data }) => {
                 <div className="projects-item-meta">
                   <h5>{projects.title}</h5>
                   <p>{projects.category}</p>
+                  <p>{projects.description}</p>
                 </div>
               </div>
               <div className="link-icon">
