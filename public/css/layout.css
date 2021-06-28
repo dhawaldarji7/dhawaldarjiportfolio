@@ -717,7 +717,7 @@ ul#nav li.current a {
 }
 #contact .contactLogo:before {
   font-family: "FontAwesome";
-  content: "\f0e0";
+  content: "\f086";
   padding-right: 0px;
   font-size: 45px;
   line-height: 40px;
@@ -729,6 +729,32 @@ ul#nav li.current a {
 #contact .greet {
   display: flex;
   justify-content: center;
+}
+
+#contact .myName {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#contact .email::before {
+  font-family: "FontAwesome";
+  content: "\f0e0";
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+#contact .addr::before {
+  font-family: "FontAwesome";
+  content: "\f015";
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#contact .phone::before {
+  font-family: "FontAwesome";
+  content: "\f095";
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 #contact h4 {
@@ -777,6 +803,13 @@ ul#nav li.current a {
   color: #fff;
   background-color: grey;
 }
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #dee1dd;
+  opacity: 70%;
+}
+
 #contact button.submit {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -805,7 +838,7 @@ ul#nav li.current a {
   color: #dee1dd;
   height: 60px;
   width: 150px;
-  background: #373233;
+  background: red;
   border: none;
   cursor: pointer;
   display: inline-block;

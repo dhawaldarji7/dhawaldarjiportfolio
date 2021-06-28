@@ -190,13 +190,15 @@ const Contact = ({ data }) => {
           <div className="widget widget_contact">
             <h4>Contact Details</h4>
             <p className="address">
-              {contactName}
+              <span className="myName">{contactName}</span>
               <br />
-              Email: {contactEmail}
+              <span className="email">{contactEmail}</span>
               <br />
-              Address: {city}, {state}, {country} {zip}
+              <span className="addr">
+                {city}, {state}, {country} {zip}
+              </span>
               <br />
-              <span> Phone: {phone}</span>
+              <span className="phone">{phone}</span>
             </p>
           </div>
         </aside>
