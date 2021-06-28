@@ -7,7 +7,12 @@ const projects = ({ data }) => {
       return (
         <div key={projects.title} className="columns projects-item">
           <div className="item-wrap">
-            <a href={projects.url} title={projects.title}>
+            <a
+              href={projects.url}
+              title={projects.title}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img alt={projects.title} src={projectImage} />
               <div className="overlay">
                 <div className="projects-item-meta">

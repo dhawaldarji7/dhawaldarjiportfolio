@@ -234,6 +234,15 @@ ul#nav li.current a {
   line-height: 30px;
   color: black;
 }
+
+#about .aboutContainer {
+  display: flex;
+}
+
+#about .bio {
+  font-size: medium;
+}
+
 #about .profile-pic {
   position: relative;
   width: 200px;
@@ -244,18 +253,43 @@ ul#nav li.current a {
 #about .download {
   width: 50.33333%;
 }
+
+#about .downloadButton {
+  font: 16px/30px "opensans-bold", sans-serif;
+  background: black;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0;
+  color: #fff;
+  padding: 12px 20px;
+  margin-bottom: 18px;
+  border: none;
+  cursor: pointer;
+  height: auto;
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
 #about .main-col {
   padding-right: 5%;
 }
-#about .download .button {
+#about .downloadButton {
   margin-top: 6px;
   background: black;
 }
-#about .download .button:hover {
+#about .downloadButton:hover {
   background: whitesmoke;
   color: black;
 }
-#about .download .button i {
+#about .downloadButton i {
   margin-right: 15px;
   font-size: 20px;
 }

@@ -10,23 +10,26 @@ const About = ({ data }) => {
   return (
     <section id="about">
       <div className="row">
-        <div className="three columns">
-          <img
-            className="profile-pic"
-            src={profilepic}
-            alt="Dhawal's Profile Pic"
-          />
-        </div>
-        <div className="nine columns main-col">
-          <h2>
-            <span>About Me</span>
-          </h2>
-          <p>{bio}</p>
-        </div>
-        <div className="row">
-          <div className="columns download">
+        <div className="aboutContainer">
+          <div className="three columns">
+            <img
+              className="profile-pic"
+              src={profilepic}
+              alt="Dhawal's Profile Pic"
+            />
+          </div>
+          <div className="nine columns main-col">
+            <h2>
+              <span>About Me</span>
+            </h2>
+            <p className="bio">{bio}</p>
             <p>
-              <a href={resumeDownload} className="button">
+              <a
+                href={resumeDownload}
+                className="downloadButton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa fa-download"></i>Resume
               </a>
             </p>
