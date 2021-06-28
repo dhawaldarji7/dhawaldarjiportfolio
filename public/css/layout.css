@@ -204,7 +204,7 @@ ul#nav li.current a {
 /* ------------------------------------------------------------------ */
 
 #about {
-  background: #6d9197;
+  background: #7fa8af;
   margin-top: 5px;
   padding-top: 96px;
   padding-bottom: 66px;
@@ -261,7 +261,7 @@ ul#nav li.current a {
   display: inline-block;
   text-decoration: none;
   letter-spacing: 0;
-  color: #fff;
+  color: #7fa8af;
   padding: 12px 20px;
   margin-bottom: 18px;
   border: none;
@@ -916,7 +916,7 @@ ul#nav li.current a {
 
 footer {
   padding-top: 48px;
-  margin-bottom: 48px;
+  margin-bottom: 15px;
   color: #303030;
   font-size: 14px;
   text-align: center;
@@ -980,6 +980,18 @@ footer .social-links li a:hover {
   color: #dee1dd;
 }
 
+footer .easterEgg {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  color: #0f0f0f;
+  text-align: center;
+}
+
+footer .easterEgg:hover {
+  color: tomato;
+  transition: 1.5s all ease-out;
+}
 /* Go To Top Button */
 #go-top {
   position: absolute;

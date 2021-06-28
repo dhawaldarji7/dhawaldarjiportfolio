@@ -27,6 +27,10 @@ const Footer = ({ data }) => {
             <ul className="copyright">
               <li>©️ All rights reserved</li>
             </ul>
+
+            <ul className="easterEgg">
+              <li>You're awesome! Believe in yourself!</li>
+            </ul>
           </ul>
         </div>
         <div id="go-top">
