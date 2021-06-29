@@ -20,16 +20,18 @@ const Footer = ({ data }) => {
           <ul className="social-links">{networks}</ul>
 
           <ul>
-            <li style={{ color: "grey" }}>
-              Made while consuming chai by Dhawal
-            </li>
-
+            <ul className="copyright">
+              <li>Made while consuming chai by Dhawal</li>
+            </ul>
             <ul className="copyright">
               <li>©️ All rights reserved</li>
             </ul>
 
             <ul className="easterEgg">
-              <li>You're awesome! Believe in yourself!</li>
+              <li>
+                You're awesome! Believe in yourself!{" "}
+                <span className="fa fa-heart"></span>
+              </li>
             </ul>
           </ul>
         </div>

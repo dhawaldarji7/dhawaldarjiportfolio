@@ -13,7 +13,7 @@ const projects = ({ data }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img alt={projects.title} src={projectImage} />
+              <img alt="" src={projectImage} />
               <div className="overlay">
                 <div className="projects-item-meta">
                   <h5>{projects.title}</h5>
@@ -22,7 +22,7 @@ const projects = ({ data }) => {
                 </div>
               </div>
               <div className="link-icon">
-                <i className="fa fa-link"></i>
+                <i className="fa fa-external-link"></i>
               </div>
             </a>
           </div>
