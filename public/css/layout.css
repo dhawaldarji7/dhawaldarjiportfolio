@@ -101,7 +101,7 @@ header .social li a {
   color: #fff;
 }
 header .social li a:hover {
-  color: #11abb0;
+  color: rgb(59, 206, 123);
 }
 
 /* scrolldown link */
@@ -211,15 +211,6 @@ ul#nav li.current a {
   overflow: hidden;
 }
 
-#about a,
-#about a:visited {
-  color: #fff;
-}
-#about a:hover,
-#about a:focus {
-  color: #11abb0;
-}
-
 #about h2 {
   font: 22px/30px "opensans-bold", sans-serif;
   color: black;
@@ -259,36 +250,25 @@ ul#nav li.current a {
   font: 16px/30px "opensans-bold", sans-serif;
   background: black;
   display: inline-block;
-  text-decoration: none;
   letter-spacing: 0;
   color: #7fa8af;
   padding: 12px 20px;
   margin-bottom: 18px;
   border: none;
   cursor: pointer;
-  height: auto;
-
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
+  border: 3px black solid;
+  border-radius: 5%;
+  margin-top: 6px;
 }
+
 #about .main-col {
   padding-right: 5%;
 }
-#about .downloadButton {
-  margin-top: 6px;
-  background: black;
-}
+
 #about .downloadButton:hover {
-  background: whitesmoke;
+  background: #7fa8af;
   color: black;
+  transition: all 0.1s ease-out;
 }
 #about .downloadButton i {
   margin-right: 15px;
@@ -1000,9 +980,6 @@ footer .easterEgg {
 footer .easterEgg:hover {
   color: orangered;
   transition: 1.5s all ease-out;
-}
-
-footer .reactLogo {
 }
 
 /* Go To Top Button */
