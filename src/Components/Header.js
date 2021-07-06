@@ -59,6 +59,7 @@ const Header = ({ data }) => {
       </nav>
 
       <div className="row banner">
+        <h2 style={{ color: "coral" }}>Portfolio2.0 coming soon!</h2>
         <div className="banner-text">
           <h1 className="responsive-headline">
             <TypeWriter typing={1}>{name ? `I'm ${name}` : null}</TypeWriter>
