@@ -58,15 +58,9 @@
     ],
     "work": [
       {
-        "company": "Cigna",
-        "title": "Java FullStack Developer",
-        "years": "January 2021 - June 2021",
-        "description": ""
-      },
-      {
-        "company": "Zensar Technologies",
-        "title": "Java FullStack Developer",
-        "years": "January 2017 - July 2019",
+        "company": "Infosys",
+        "title": "FullStack Developer",
+        "years": "July 2021 - Present",
         "description": ""
       }
     ],
@@ -77,7 +71,7 @@
       },
       {
         "type": "Web Development",
-        "values": "ReactJS, HTML/CSS, Bootstrap, AJAX, jQuery, REST, SOAP"
+        "values": "React, Angular, HTML/CSS, Bootstrap, Tailwind CSS, AJAX, jQuery, REST, SOAP"
       },
       {
         "type": "Frameworks",
@@ -89,7 +83,7 @@
       },
       {
         "type": "Databases",
-        "values": "MySQL, MongoDB"
+        "values": "MySQL, MongoDB, PostgreSQL"
       },
       {
         "type": "Developer Tools & IDEs",
