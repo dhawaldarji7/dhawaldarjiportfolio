@@ -173,9 +173,7 @@ const Contact = ({ data }) => {
 
                   <button
                     type="submit"
-                    className={
-                      !(formik.errors && formik.isValid) ? "disabled" : "submit"
-                    }
+                    className="submit"
                     disabled={!(formik.errors && formik.isValid)}
                   >
                     Submit

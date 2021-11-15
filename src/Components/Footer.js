@@ -29,8 +29,7 @@ const Footer = ({ data }) => {
 
             <ul className="easterEgg">
               <li>
-                You're awesome! Believe in yourself!{" "}
-                <span className="fa fa-heart"></span>
+                Believe in yourself! <span className="fa fa-heart"></span>
               </li>
             </ul>
           </ul>

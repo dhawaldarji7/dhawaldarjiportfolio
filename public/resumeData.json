@@ -10,10 +10,10 @@
     "phone": "+1 603-205-9043",
     "address": {
       "street": "",
-      "city": "Dover",
-      "state": "NH",
+      "city": "Providence",
+      "state": "RI",
       "country": "USA",
-      "zip": "03820"
+      "zip": "02903"
     },
     "website": "",
     "resumedownload": "https://drive.google.com/file/d/1Ilc7fmevbrtm1I93q9_BsO9qoy0vNpLH/view?usp=sharing",
@@ -67,7 +67,7 @@
     "skills": [
       {
         "type": "Languages",
-        "values": "Java, Python, C++, C, JavaScript"
+        "values": "Java, JavaScript, TypeScript, Python, C++, C"
       },
       {
         "type": "Web Development",
